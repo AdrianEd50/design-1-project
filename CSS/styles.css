@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "montserrat-black";
+  src: url("../fonts/Montserrat-Black.ttf") format("truetype");
+}
+
+h1 {
+  font-family: "montserrat-black", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: "montserrat-light", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+}
+
+main {
+  color: #ffffff;
+}
+
+nav ul {
+  padding: 0px;
+  margin-left: 25px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header a {
+  color: #ffffff;
+  padding: 10px;
+}
+
+.cta-button {
+  background-color: #616161;
+  color: #ffffff;
+  padding: 10px 80px;
+  border-radius: 50px;
+}
+
+/*home page background*/
+
+.welcome {
+  width: 100%;
+  height: 1560px;
+  background: url("../Images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  background: #456a8d;
+}
+
+.selling-point {
+  color: #ffffff;
+}
