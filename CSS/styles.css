@@ -7,11 +7,15 @@ body {
   margin: 0px;
 }
 
-h1,
 .logo {
   font-family: "boots and spurs", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
   color: #ffffff;
+}
+
+.welcome__content h1 {
+  margin-top: 0px;
+  color: white;
 }
 
 h2 {
@@ -21,6 +25,7 @@ h2 {
 footer {
   background-color: #202020;
   color: #ffffff;
+  text-align: center;
 }
 
 header {
@@ -43,6 +48,141 @@ nav li {
   margin: 10px;
 }
 
+/*home page background*/
+
+.welcome {
+  background-image: url(../images/home-header2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 70vh;
+  position: relative;
+}
+
+.welcome__content {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  left: 100px;
+}
+
+.welcome__content h1 {
+  font-size: 2em;
+}
+
+.featured {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 50px 20px;
+  gap: 10px;
+}
+
+.featured h1 {
+  text-align: center;
+  grid-column: -1/1;
+  color: black;
+  font-family: "roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.featured h2 {
+  color: black;
+  grid-column: -1/1;
+  margin-left: 10px;
+}
+
+.featured img {
+  width: 50%;
+}
+
+/*jacket-page*/
+
+.jackets h1 {
+  color: black;
+  font-family: "roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 2em;
+}
+
+.products {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin-left: 10px;
+  gap: 10px;
+}
+
+.products h2 {
+  margin-left: 10px;
+}
+
+.products__jackets {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin-left: 10px;
+  gap: 10px;
+}
+
+.products__jackets h3,
+.products__jackets p {
+  grid-column: 1;
+  margin: 10px;
+}
+
+.products__jackets h2 {
+  margin-left: 10px;
+}
+
+.products img {
+  grid-column: -1/1;
+  width: 50%;
+}
+
+.products h2,
+.products h3,
+.products p {
+  grid-column: 1;
+  font-size: 0.9em;
+  margin: 5px;
+}
+
+.product--sale {
+  display: flex;
+  grid-column: 1;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.guitars {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 50px auto;
+  grid-gap: 10px;
+  grid-gap: 20px;
+}
+
+.product-list h2 {
+  grid-column: -1/1;
+  font-size: 2em;
+  margin-left: 10px;
+}
+
+.products__jackets img {
+  width: 50%;
+}
+
+/*Links*/
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -53,21 +193,106 @@ header a {
   padding: 10px;
 }
 
-.cta-button {
+.cta {
   background-color: #616161;
   color: #ffffff;
-  padding: 10px 80px;
-  border-radius: 50px;
+  padding: 10px 70px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-family: "roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.featured {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.cta-small {
+  background-color: red;
+  padding: 8px 30px;
+  font-size: 0.8em;
+  max-width: 30px;
+}
+
+.cta-sale {
+  background-color: green;
+  max-width: 30px;
+}
+
+.cta-contact {
+  background-color: red;
+  padding: 8px 30px;
+  font-size: 0.8em;
+}
+
+.current {
+  text-decoration: underline;
+}
+
+/*contact page*/
+input,
+select,
+textarea {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  margin: 10px 10px 10px 0px;
+  padding: 5px;
+}
+
+textarea {
+  height: 65%;
+}
+
+.contact {
   max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
 }
 
-/*home page background*/
-
-main {
-  background: #456a8d;
+.form-wrapper {
+  display: flex;
+  text-align: left;
 }
+
+.form-wrapper > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/*product-spesific*/
+
+.product-spesific {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.product-spesific__details {
+  padding: 30px;
+}
+
+.product-spesific__details a {
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+
+.product-spesific__details__price {
+  font-size: 1.5em;
+}
+
+.product-spesific > * {
+  flex: 1;
+}
+
+.product-spesific__buy {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.product-spesific__buy h1 {
+  color: black;
+  font-family: "roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 2em;
+}
+
+/*checkout page*/
