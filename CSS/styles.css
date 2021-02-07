@@ -5,12 +5,13 @@
 
 body {
   margin: 0px;
+  font-family: "roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .logo {
-  font-family: "boots and spurs", "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
+  font-family: "roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
+  font-size: 1.7em;
 }
 
 .welcome__content h1 {
@@ -25,6 +26,7 @@ h2 {
 footer {
   background-color: #202020;
   color: #ffffff;
+  padding: 10px;
   text-align: center;
 }
 
@@ -48,10 +50,10 @@ nav li {
   margin: 10px;
 }
 
-/*home page background*/
+/*home page*/
 
 .welcome {
-  background-image: url(../images/home-header2.jpg);
+  background-image: url(../images/home-header3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -70,11 +72,16 @@ nav li {
   font-size: 2em;
 }
 
+.welcome img {
+  width: 100%;
+}
+
 .featured {
   background-color: #ffffff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 50px 20px;
+  max-width: 1000px;
+  margin: 50px auto;
   gap: 10px;
 }
 
@@ -89,10 +96,6 @@ nav li {
   color: black;
   grid-column: -1/1;
   margin-left: 10px;
-}
-
-.featured img {
-  width: 50%;
 }
 
 /*jacket-page*/
@@ -158,14 +161,10 @@ nav li {
   text-decoration: line-through;
 }
 
-.guitars {
-  max-width: 1000px;
-  margin: auto;
-}
-
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1000px;
   margin: 50px auto;
   grid-gap: 10px;
   grid-gap: 20px;
@@ -178,7 +177,7 @@ nav li {
 }
 
 .products__jackets img {
-  width: 50%;
+  width: 100%;
 }
 
 /*Links*/
@@ -186,6 +185,10 @@ nav li {
 a {
   text-decoration: none;
   color: #ffffff;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 header a {
@@ -207,18 +210,29 @@ header a {
   background-color: red;
   padding: 8px 30px;
   font-size: 0.8em;
-  max-width: 30px;
+  grid-column: 2;
+  grid-row: 2/4;
+  min-width: 51.2px;
+  max-width: 50px;
+  text-align: center;
 }
 
 .cta-sale {
   background-color: green;
-  max-width: 30px;
 }
 
 .cta-contact {
   background-color: red;
   padding: 8px 30px;
   font-size: 0.8em;
+}
+
+.cta-spesific {
+  background-color: red;
+  padding: 8px 30px;
+  font-size: 0.8em;
+  max-width: 80px;
+  text-align: center;
 }
 
 .current {
@@ -241,8 +255,9 @@ textarea {
 
 .contact {
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 0px auto;
   text-align: center;
+  min-height: 86vh;
 }
 
 .form-wrapper {
@@ -262,6 +277,8 @@ textarea {
   display: flex;
   max-width: 1000px;
   margin: 50px auto;
+  align-items: center;
+  min-height: 78vh;
 }
 
 .product-spesific__details {
@@ -295,4 +312,8 @@ textarea {
   font-size: 2em;
 }
 
-/*checkout page*/
+@media (min-width: 600px) {
+  .featured {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
